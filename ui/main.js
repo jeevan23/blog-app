@@ -12,10 +12,19 @@ img.onclick=function(){
 };
 
 var button=document.getElementById("counter");
-var counter=0;
 button.onclick=function(){
-    
-    counter=counter+1;
-    document.getElementById("count").innerHTML=counter;
-    
+
+var request=new XMLHttprequest();
+request.onreadystatechange=function()
+{
+    if(request.readyState==4){
+        if(request.status==200){
+            var counter=request.responseText;
+            var span=document.getElementById("count");
+            span.innerHTML=count.toString();
+        }
+    }
+};
+request.open('GET','http://jeevan23.imad.hasura-app.io/counter',true);
+request.send(null);
 };
