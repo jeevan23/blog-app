@@ -17,7 +17,7 @@ button.onclick=function(){
 var request=new XMLHttprequest();
 request.onreadystatechange=function()
 {
-    if(request.readyState==4){
+    if(request.readyState==XMLHttprequest.DONE){
         if(request.status==200){
             var counter=request.responseText;
             var span=document.getElementById("count");
