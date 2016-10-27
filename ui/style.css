@@ -31,12 +31,14 @@ body {
                         margin-top:-100px;
             }
 .header{
-    height:50px;
+    
     background:#F0F0F0;
-    border:1 px solid #CCC;
     position:fixed;
-    top:0px;
+    top:0;
     width:100%;
-    margin:0px ;
+    margin:0 ;
+    right:0;
+    padding:25px;
+    
 }
 
