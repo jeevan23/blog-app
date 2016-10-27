@@ -30,4 +30,13 @@ body {
                         padding-right: 20px;
                         margin-top:-100px;
             }
+.header{
+    height:50px;
+    background:#F0F0F0;
+    border:1 px solid #CCC;
+    position:fixed;
+    top:0px;
+    width:100%;
+    margin:0px auto;
+}
 
