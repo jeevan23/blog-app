@@ -68,10 +68,9 @@ body {
 
 .dropdown {
     position: relative;
-    display: inline-block;
-    float:right;
     margin-bottom:-40px;
     margin-top:-60px;
+     float:right;
 }
 
 .dropdown-content {
