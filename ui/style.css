@@ -64,6 +64,7 @@ body {
     border: none;
     cursor: pointer;
     text-decoration:none;
+    margin-right:50px;
 }
 
 .dropdown {
