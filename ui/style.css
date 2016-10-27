@@ -94,11 +94,11 @@ body {
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
-//remove the underline
+
 .underline{
     text-decoration:none;
 }
-//remove the bullets.
+
 .bullets{
     list-style-type:none;
 }
