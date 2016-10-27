@@ -17,7 +17,7 @@ body {
 }
 
 .img-medium {
-    height: 200px;
+    height: 100%;
 }
 
   .container{
@@ -32,13 +32,18 @@ body {
             }
 .header{
     
-    background:#72618f;
-    position:fixed;
-    top:0;
-    width:100%;
-    margin:0 ;
-    right:0;
-    padding:25px;
+    
+    background: #72618f;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 25px;
+    left: 0px;
+    FONT-FAMILY: cursive;
+    font-size: -webkit-xxx-large;
+    color: #ece5e5;
+    padding-top: 10px;
     
 }
 
