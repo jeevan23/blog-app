@@ -89,6 +89,6 @@ body {
     list-style-type:none;
 }
 
-.dropbtn ul{
+.dropbtn ul,li,a{
     list-style-type:none;
 }
