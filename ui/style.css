@@ -35,7 +35,8 @@ body {
 }
 
 .footer ul li{
-   text-align: -webkit-match-parent;
+   display:flex;
+   justify-content:center;
 }
 
 ul {
