@@ -101,6 +101,10 @@ body {
 /*.dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }*/
-.dropdown ul,a{
+.dropdown ul{
+    list-style-type:none;
+}
+
+.dropdown-content li{
     list-style-type:none;
 }
