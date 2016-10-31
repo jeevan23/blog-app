@@ -15,23 +15,16 @@ body {
                         margin-top:500px;
             }
 .header{
-    
-    
     background: #47a3ae;
     position: fixed;
     top: 0;
     width: 100%;
-    margin: 0;
-    padding: 25px;
     left: 0;
     FONT-FAMILY: cursive;
     font-size: -webkit-xxx-large;
     color: #ece5e5;
-    padding-top: 5px;
-    padding-bottom: 10px;
-
-    
 }
+
 .footer{
     background: #3a3d3e;
     width: 100%;
@@ -57,6 +50,7 @@ li a, .dropbtn {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size:x-large;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
@@ -81,10 +75,19 @@ li.dropdown {
     text-decoration: none;
     display: block;
     text-align: left;
+    font-size:medium;
 }
 
 .dropdown-content a:hover {background-color: #f1f1f1}
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.right{
+    float:right;
+}
+
+.left{
+    float:left;
 }
