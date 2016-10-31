@@ -45,7 +45,6 @@ body {
     color: #ece5e5;
     padding-top: 5px;
     padding-bottom: 10px;
-    list-style-type:none;
     
 }
 
@@ -66,7 +65,6 @@ body {
     cursor: pointer;
     text-decoration:none;
     margin-right:50px;
-    list-style-type:none;
 }
 
 .dropdown {
@@ -75,7 +73,6 @@ body {
     margin-top:-60px;
      float:right;
      display:block;
-     list-style-type:none;
 }
 
 .dropdown-content {
@@ -85,7 +82,6 @@ body {
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     font-size:0;
-    list-style-type:none;
 }
 
 .dropdown-content a {
@@ -94,7 +90,6 @@ body {
     text-decoration: none;
     display: block;
     font-size:medium;
-    list-style-type:none;
 }
 
 .dropdown-content a:hover {background-color: #f0f0f0}
@@ -105,4 +100,8 @@ body {
 
 /*.dropdown:hover .dropbtn {
     background-color: #3e8e41;
+}*/
+.dropdown ul{
+    list-style-type:none;
+}
 }
