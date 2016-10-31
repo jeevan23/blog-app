@@ -92,6 +92,7 @@ body {
     text-decoration: none;
     display: block;
     font-size:medium;
+    list-style-type:none;
 }
 
 .dropdown-content a:hover {background-color: #f0f0f0}
