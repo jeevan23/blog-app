@@ -105,6 +105,6 @@ body {
     list-style-type:none;
 }
 
-.dropdown-content a{
+.dropdown-content li,a{
     list-style-type:none;
 }
