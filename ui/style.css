@@ -25,12 +25,16 @@ body {
     color: #ece5e5;
 }
 
-.footer{
+#footer{
     background: #222;
     width: 100%;
     height: 437px;
     position: absolute;
     left: 0;
+    text-align:center;
+}
+
+#footer ul li{
     text-align:center;
 }
 
