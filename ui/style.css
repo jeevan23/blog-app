@@ -31,6 +31,7 @@ body {
     height: 437px;
     position: absolute;
     left: 0;
+    text-align:center;
 }
 
 ul {
@@ -95,82 +96,118 @@ li.dropdown {
     margin-left:15px;
 }
 
-.twitter-share-button{
-    text-align:center;
+section, section div {
+  /* See it in slo-mo, you can change this */
+  transition-duration: .6s;
 }
 
-@import "compass/css3";
-
-@import url(http://fonts.googleapis.com/css?family=Raleway+Dots);
-@import url(http://fonts.googleapis.com/css?family=Advent+Pro:400,200,700);
-@import url(http://weloveiconfonts.com/api/?family=entypo);
-
-/* entypo */
-[class*="entypo-"]:before {
-  font-family: 'entypo', sans-serif;
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: -webkit-radial-gradient(center top, circle farthest-corner, #FFFFFF 0%, #D8DFE9 100%);
+  background-image: radial-gradient(circle farthest-corner at center top, #FFFFFF 0%, #D8DFE9 100%);
+  overflow: hidden;
 }
 
-$green: #74d4b3;
-$red: #ef8974; 
-$black: #2C2E31;
-$gray: #5F6164;
-$light_gray: #ccc;
-$white: #fff;
-
-html,body {
-  margin: 0;
-  background-color: $green;
-}
+section, .button { transition-timing-function: ease; }
 
 section {
-
-	#services {
-		text-align: center;
-    transform: translatez(0);
-    
-		h2 {
-			margin: 80px 0px 40px;
-			color: $white;
-			font-size: 2.4em;
-			font-family: 'Raleway Dots', sans-serif;
-			text-transform: uppercase;
-			text-align: center;
-		}
-
-		li {
-			width: 120px;
-			height: 140px;
-			display: inline-block;
-			margin: 20px;
-			list-style: none;
-
-			div {
-				width: 120px;
-				height: 120px;
-				color: $green;
-				font-size: 3.4em;
-				text-align: center;
-				line-height: 120px;
-				background-color: $white;
-				transition: all 0.5s ease;
-
-				&:hover {
-					transform: rotate(360deg);
-					border-radius: 100px;
-				}
-			}
-
-			span {
-				width: 120px;
-				height: 20px;
-				display: block;
-				padding: 15px 0px;
-				color: $white;
-				font-family: 'Advent Pro', sans-serif;
-				text-transform: uppercase;
-				font-size: 1.2em;
-				text-align: center;
-			}
-		}
-	}
+  display: inline-block;
+  position: relative;
+  padding: .375rem .375rem 0;
+  height: 2.5rem;
+  background: #A9ADB6;
+  border-radius: .25rem;
+  perspective: 300;
+  box-shadow: 0 -1px 2px #fff, inset 0 1px 2px rgba(0,0,0,.2), inset 0 .25rem 1rem rgba(0,0,0,.1);
 }
+
+
+.button { opacity: 0; }
+
+.cover {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  transform-origin: center bottom;
+  transform-style: preserve-3d;
+  font: 1.25em/2 "icon";
+  color: white;
+  text-align: center;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.innie, .outie, .spine, .shadow { position: absolute; width: 100%; }
+
+.innie, .outie {
+  height: 100%;
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,.1) 100%);
+  border-radius: .25rem;
+}
+.innie:after, .outie:after { content:"t"; }
+
+.innie {
+  background-color: #67E2FE;
+  text-shadow: 0 -2px 4px rgba(0,0,0,.2);
+}
+
+.spine {
+  top: .25rem;
+  background: #20C7F3;
+  height: .25rem;
+  transform: rotateX(90deg);
+  transform-origin: center top;
+}
+
+.shadow {
+  top: 100%;
+  left: 0;
+  height: 3.5rem;
+  transform-origin: center top;
+  transform: rotateX(90deg);
+  opacity: 0;
+  z-index: 0;
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,.6) 0%, transparent 100%);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,.6) 0%, transparent 100%);
+  border-radius: .4rem;
+
+}
+
+.outie {
+  background-color: #2EC8FA;
+  transform: translateZ(.25rem);
+  text-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+
+section:hover { background: #EBEFF2; }
+section:hover .button { opacity: 1; }
+
+section:hover .cover, section:hover .innie, section:hover .spine, section:hover .outie, section:hover .spine { transition-timing-function: cubic-bezier(.2,.7,.1,1.1); }
+
+section:hover .cover { transform: rotateX(-120deg);  }
+
+section:hover .innie { background-color: #3ADAFC; }
+section:hover .spine { background-color: #52B1E0; }
+section:hover .outie { background-color: #2174A0; color: rgba(255,255,255,0); }
+
+section:hover .shadow { 
+  opacity: 1;
+  transform: rotateX(45deg) scale(.95);
+}
+
+
+small {
+  font: .8rem/1 sans-serif;
+  padding-top: 4rem;
+  color: #777;
+}
+small a { color: #222; text-decoration: none; border-bottom: thin solid #ccc; }
+small a:hover { border-bottom-color: #222; }
+
+
+/* Twitter font icon: http://codepen.io/bennettfeely/pen/GCAKJ */
+@font-face { font-family:icon; src: url('http://bennettfeely.com/fonts/icons.woff'); }
