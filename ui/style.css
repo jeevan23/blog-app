@@ -29,7 +29,11 @@ body {
     color: #ece5e5;
     padding-top: 5px;
     padding-bottom: 10px;
+
     
+}
+.header li{
+    display:inline;
 }
 
 .footer{
