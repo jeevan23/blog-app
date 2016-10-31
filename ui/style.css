@@ -45,9 +45,9 @@ ul {
     overflow: hidden;
 }
 
-li {
+/*li {
     float: right;
-}
+}*/
 
 li a, .dropbtn {
     display: inline-block;
