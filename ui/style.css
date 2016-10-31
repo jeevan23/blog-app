@@ -67,6 +67,7 @@ body {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     font-size:0;
     float:left;
+    list-style-type:none;
 }
 
 .dropdown-content a {
@@ -87,9 +88,5 @@ body {
     background-color: #3e8e41;
 }*/
 .dropdown ul{
-    list-style-type:none;
-}
-
-.dropbtn ul,li,a{
     list-style-type:none;
 }
