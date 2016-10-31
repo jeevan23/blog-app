@@ -48,7 +48,7 @@ body {
     border: none;
     cursor: pointer;
     text-decoration:none;
-    margin-right:50px;
+    margin-right:140px;
 }
 
 .dropdown {
@@ -68,7 +68,7 @@ body {
     font-size:0;
     float:left;
     list-style-type:none;
-    padding:5px;
+    padding:0;
 }
 
 .dropdown-content a {
