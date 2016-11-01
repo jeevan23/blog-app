@@ -34,9 +34,9 @@ body {
     text-align:center;
 }
 
-/*.footer ul li{
+.footer ul li{
   float:left;
-}*/
+}
 
 ul {
     list-style-type: none;
