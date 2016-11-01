@@ -36,6 +36,7 @@ body {
 
 .footer ul li{
   float:left;
+  m
 }
 
 ul {
@@ -138,6 +139,10 @@ ul.social-buttons li a.brandico-facebook {
 
 ul.social-buttons li a.brandico-instagram {
   background-color: #3f729b;
+}
+
+ul.social-buttons li a.brandico-linkedin {
+  background-color: #0e76a8;
 }
 
 /*Demo 1*/
