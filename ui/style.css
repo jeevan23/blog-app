@@ -104,3 +104,9 @@ li.dropdown {
     margin-left:420px;
     margin-top:25px
 }
+
+.size{
+    font-size: medium;
+    font-family: cursive;
+    color: dimgrey;
+}
