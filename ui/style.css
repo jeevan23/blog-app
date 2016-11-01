@@ -34,11 +34,9 @@ body {
     text-align:center;
 }
 
-/*.footer ul li{
-   display:flex;
-   justify-content:center;
-   margin:0 auto;
-}*/
+.footer ul li{
+  float:left;
+}
 
 ul {
     list-style-type: none;
