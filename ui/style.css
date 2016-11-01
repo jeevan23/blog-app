@@ -34,10 +34,9 @@ body {
     text-align:center;
 }
 
-.footer ul li{
+/*.footer ul li{
   float:left;
-  margin-left:450px;
-}
+}*/
 
 ul {
     list-style-type: none;
@@ -111,6 +110,7 @@ li.dropdown {
 ul.social-buttons {
   text-align: center;
   margin-top: 50px;
+  margin-left:450px;
 }
 
 ul.social-buttons li {
