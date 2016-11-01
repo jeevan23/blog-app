@@ -102,7 +102,8 @@ li.dropdown {
 }
 
 .addthis_inline_share_toolbox{
-    margin-top:100px
+    margin-top:100px;
+    margin-left:450px;
 }
 
 .size{
