@@ -34,11 +34,11 @@ body {
     text-align:center;
 }
 
-.footer ul li{
+/*.footer ul li{
    display:flex;
    justify-content:center;
    margin:0 auto;
-}
+}*/
 
 ul {
     list-style-type: none;
