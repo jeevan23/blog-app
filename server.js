@@ -94,7 +94,7 @@ function createTemplate(data)
 }
 
 var pool = new Pool(config);
-app.get('/test-db',function(req,res){
+app.post('/test-db',function(req,res){
     
     pool.query('INSERT INTO "blog_posts" ("title", "author", "date", "content", "category") VALUES (req.body.posttitle,req.body.authorname,req.body.date,req.body.content,req.body.category);');
 
