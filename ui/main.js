@@ -1,2 +1,4 @@
 var   button=document.getElementById("submit");
-button.onclick=alert("Your Artice have been Submitted");
+button.onclick=function(){
+    alert("Your Article have been submitted");
+};
