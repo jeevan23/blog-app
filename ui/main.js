@@ -1,4 +1,4 @@
 var   button=document.getElementById("submit");
 button.onclick=function(){
-    alert("Your Article have been submitted");
+    http.href("Location:http://jeevan23.imad.hasura-app.io/test-db");
 };
