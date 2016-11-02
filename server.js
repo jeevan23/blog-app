@@ -93,17 +93,19 @@ function createTemplate(data)
     return htmlTemplate;
 }
 
-app.get('/Leaderboard.html',function(req, res){
-    res.sendFile(path.join(__dirname,'Leaderboard.html'));
-});
-
-
 var pool = new Pool(config);
 app.post('/test-db',function(req,res){
     
     pool.query('INSERT INTO "blog_posts" ("title", "author", "date", "content", "category") VALUES (req.body.blogtitle,req.body.authorname,req.body.date,req.body.content,req.body.category);');
 
 });
+
+app.get('/Leaderboard.html',function(req, res){
+    res.sendFile(path.join(__dirname,'Leaderboard.html'));
+});
+
+
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
