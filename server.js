@@ -101,7 +101,7 @@ app.get('/Leaderboard.html',function(req, res){
 var pool = new Pool(config);
 app.post('/test-db',function(req,res){
     
-    pool.query('INSERT INTO blog_posts(title,author,date,content,category) VALUES($1,$2,$3,$4,$5)',function(err,result){
+    pool.query('INSERT INTO blog_posts(title,author,date,content,category) VALUES($1,$3,$5,$2,$4)',function(err,result){
         if(err){
             res.status(500).send(err.tostring());
         }else{
