@@ -8,7 +8,7 @@ var app = express();
 var Pool = require('pg').Pool;
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded());
 app.use(morgan('combined'));
 
 
