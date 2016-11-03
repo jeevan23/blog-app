@@ -1,8 +1,9 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
+var bodyParser = require('body-parser');
 var app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(morgan('combined'));
 
 var articles={
@@ -90,6 +91,12 @@ app.get('/', function (req, res) {
 
 app.get('/Leaderboard.html',function(req,res){
     res.sendFile(path.join(__dirname,'Leaderboard.html'));
+});
+
+var pool=new Pool('config');
+app.post('/test-db',function(req,res){
+    
+    pool.query("INSERT INTO blog_posts(title,author,date,content,category) VALUES ('"+req.body.posttitle+"','"+ req.body.author+"','"+req.body.date+"','"+req.body.content+"','"+req.body.category+"')");
 });
 
 var counter=0;
