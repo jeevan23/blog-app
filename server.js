@@ -98,14 +98,6 @@ app.get('/Leaderboard.html',function(req, res){
 });
 
 
-var pool = new Pool(config);
-app.post('/test-db',function(req,res){
-    
-    pool.query('INSERT INTO "blog_posts" ("title", "author", "date", "content", "category") VALUES ('"+req.query.posttitle+"','"+req.query.authorname+"','"+req.query.date+"','"+req.query.content+"','"+req.query.category+"');');
-
-});
-
-
 
 
 
