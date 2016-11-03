@@ -1,10 +1,23 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+
 var bodyParser = require('body-parser');
 var app = express();
+var Pool = require('pg').Pool;
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(morgan('combined'));
+
+
+var config = {
+  host: 'db.imad.hasura-app.io',
+  user: 'jeevan23',
+  password: 'db-jeevan23-39298',
+  database: 'jeevan23',
+  port: '5432'
+};
 
 var articles={
     
