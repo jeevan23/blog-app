@@ -93,6 +93,11 @@ function createTemplate(data)
     return htmlTemplate;
 }
 
+app.get('/Leaderboard.html',function(req, res){
+    res.sendFile(path.join(__dirname,'Leaderboard.html'));
+});
+
+
 var pool = new Pool(config);
 app.post('/test-db',function(req,res){
     
@@ -100,9 +105,6 @@ app.post('/test-db',function(req,res){
 
 });
 
-app.get('/Leaderboard.html',function(req, res){
-    res.sendFile(path.join(__dirname,'Leaderboard.html'));
-});
 
 
 
