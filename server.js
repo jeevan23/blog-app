@@ -115,7 +115,10 @@ app.post('/test-db',function(req,res){
     res.writeHead(500, {'content-type': 'text/plain'});
     res.end('An error occurred');
   };
-    pool.query("INSERT INTO blog_posts(title,author,date,content,category) VALUES ('"+req.body.posttitle+"','"+ req.body.author+"','"+req.body.date+"','"+req.body.content+"','"+req.body.category+"')");
+    pool.query("INSERT INTO blog_posts(title,author,date,content,category) VALUES ('"+req.body.posttitle+"','"+ req.body.author+"','"+req.body.date+"','"+req.body.content+"','"+req.body.category+"')",function(err,result){
+        if(err)
+        throw err;
+    });
 });
 });
 
