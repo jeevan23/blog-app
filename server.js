@@ -108,18 +108,12 @@ app.get('/', function (req, res) {
 
 var pool=new Pool('config');
 app.post('/test-db',function(req,res){
-    var server = http.createServer(function(req, res) {
-
-  var onError = function(err) {
-    console.log(err.message, err.stack);
-    res.writeHead(500, {'content-type': 'text/plain'});
-    res.end('An error occurred');
-  };
+    console.log("Hello");
     pool.query("INSERT INTO blog_posts(title,author,date,content,category) VALUES ('"+req.body.posttitle+"','"+ req.body.author+"','"+req.body.date+"','"+req.body.content+"','"+req.body.category+"')",function(err,result){
         if(err)
         throw err;
     });
-});
+
 });
 
 app.get('/Leaderboard.html',function(req,res){
