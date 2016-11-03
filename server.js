@@ -2,7 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
-var router = express.Router();
+
 var config = {
   host: 'db.imad.hasura-app.io',
   port: '5432',
@@ -14,48 +14,7 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-var articles={
-    
 
-'articleone':
-{
-  title:'Article-one|Jeevan Deep',
-  heading:'Article One',
-  date:'oct 21,2016',
-  content:`
-                <p>
-                    This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.
-                </p>
-                <p>
-                    This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.
-                </p>
-                <p>
-                    This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.
-                </p>`
-  
-},
-'articletwo':
-{
-   title:'Article-two|Jeevan Deep',
-  heading:'Article Two',
-  date:'oct 25,2016',
-  content:`
-                <p>
-                    This is the content of my second article.
-                </p>`
-},
-'article-three':
-{
-   title:'Article-three|Jeevan Deep',
-  heading:'Article Three',
-  date:'oct 28,2016',
-  content:`
-                <p>
-                    This is the content of my third article.
-                </p>`
-}
-
-};
 function createTemplate(data)
 {
     var title=data.title;
