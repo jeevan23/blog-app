@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
-<form  action="/test-db" method="post" enctype="multipart/form-data">
+<form  action="/test-db" method="post">
 Post Title :
 <input type="text" id="posttitle" name="posttitle" size="20"/>
+<br>
 Content :
 <textarea id="content" name="content" rows="10" cols="50"></textarea>
+<br>
 Author Name : 
 <input type="text" id="authorname" name="authorname"/>
+<br>
 Category:
         <select id="category" name="category">
             <option value="Ethical hacking">Ethical hacking</option>
@@ -14,8 +17,10 @@ Category:
             <option value="Algorithms">Algorithms</option>
             <option value="Web Development">Web Development</option>
         </select>
-        Date:
+<br>
+Date:
         <input id="date" type="date" name="date"/>
+<br>
 <input id="submit" type="submit" value="Save">
 </form>
 <script type="text/javascript" src="/ui/main.js">
