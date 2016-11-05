@@ -113,6 +113,8 @@ app.get('/test-db',function(req,res){
    }
    
    });
+   // var count=pool.query('SELECT COUNT(*) FROM blog_posts');
+//    res.send(count.toString());
 });
 
 
