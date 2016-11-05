@@ -103,7 +103,7 @@ app.get('/', function (req, res) {
 
 var pool=new Pool('config');
 
-app.get('b.html',function(req,res){
+app.get('/b.html',function(req,res){
    pool.query('SELECT * FROM "blog_posts" LIMIT 5',function(err,result){
        if(err){
        res.status(500).send(err.toString());
