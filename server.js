@@ -14,7 +14,8 @@ var config = {
                  database: 'jeevan23',
                   host: 'db.imad.hasura-app.io',
                   port: '5432',
-                  password: process.env.DB_PASSWORD
+                  password: process.env.DB_PASSWORD,
+                  DATABASE_URL: process.env.DATABASE_URL
 };
 
 var articles={
