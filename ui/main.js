@@ -6,7 +6,8 @@ window.onload=function(){
           if(request.status==200){
           var content=request.responseText;
           var bodyContent=document.getElementById("includedContent");
-          bodyContent.innerHTML=content;
+          var obj=JSON.parse(content);
+          bodyContent.innerHTML=obj[0].heading;
           
       }
       }
