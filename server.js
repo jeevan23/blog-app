@@ -103,9 +103,9 @@ app.get('/', function (req, res) {
 
 var pool=new Pool('config');
 
-app.get('/b',function(req,res){
-   pool.query('SELECT * FROM "blog_posts" LIMIT 5',function(err,result){
-       if(err){
+app.get('/test-db',function(req,res){
+   pool.query('SELECT * FROM blog_posts',function(err,result){
+       if (err){
        res.status(500).send(err.toString());
    } else{
        res.send(JSON.stringify(result.rows));
@@ -113,6 +113,7 @@ app.get('/b',function(req,res){
    
    });
 });
+
 
 
 app.get('/:articleName',function(req, res) {
