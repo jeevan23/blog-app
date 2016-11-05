@@ -1,5 +1,16 @@
 
-var submit=document.getElementByID("submit");
-submit.onclick = function() {
-  window.location.href = "http://jeevan23.imad.hasura-app.io/test-db";
+window.onload=function(){
+  var request=new XMLHttpRequest()  ;
+  request.onreadystatechange=function(){
+      if(request.readyState==XMLHttpRequest.DONE){
+          if(request.status==200){
+          var content=request.responseText;
+          var bodyContent=document.getElementById("includedContent");
+          bodyContent.innerHTML=content.toString();
+          
+      }
+      }
+  };
+  request.open('GET','http://jeevan23.imad.hasura-app.io/test-db',true);
+  request.send(); 
 };
