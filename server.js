@@ -1,4 +1,3 @@
-
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
@@ -11,11 +10,11 @@ app.use(morgan('combined'));
 
 
 var config = {
+     user: 'jeevan23',
+     database: 'jeevan23',
   host: 'db.imad.hasura-app.io',
-  user: 'jeevan23',
-  password: 'process.env.DB_PASSWORD',
-  database: 'jeevan23',
-  port: '5432'
+  port: '5432',
+  password: process.env.DB_PASSWORD
 };
 
 var articles={
