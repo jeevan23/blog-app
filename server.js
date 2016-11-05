@@ -1,14 +1,11 @@
-var http = require('http');
+
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
-var bodyParser = require('body-parser');
+
 var app = express();
 var Pool = require('pg').Pool;
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
-app.use(bodyParser.urlencoded());
 app.use(morgan('combined'));
 
 
@@ -104,20 +101,17 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-
-
 var pool=new Pool('config');
-app.post('/test-db',function(req,res){
-    console.log("Hello");
-    pool.query("INSERT INTO blog_posts(title,author,date,content,category) VALUES ('"+req.body.posttitle+"','"+ req.body.author+"','"+req.body.date+"','"+req.body.content+"','"+req.body.category+"')",function(err,result){
-        if(err)
-        throw err;
-    });
 
-});
-
-app.get('/Leaderboard.html',function(req,res){
-    res.sendFile(path.join(__dirname,'Leaderboard.html'));
+app.get('b.html',function(req,res){
+   pool.query('SELECT * FROM "blog_posts" LIMIT 5',function(err,result){
+       if(err){
+       res.status(500).send(err.toString());
+   } else{
+       res.send(JSON.stringify(result.rows));
+   }
+   
+   });
 });
 
 
@@ -131,9 +125,6 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/ui/madi.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
-});
 
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
