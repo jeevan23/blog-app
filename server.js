@@ -135,5 +135,11 @@ var port = 8080; // Use 8080 for local development because you might already hav
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
-var ip ='127.0.0.1';
-app.listen('127.0.0.1');
+var http = require('http');
+
+http.createServer(function(request, response){
+
+    //The following code will print out the incoming request text
+    request.pipe(response);
+
+}).listen(8080, '127.0.0.1');
