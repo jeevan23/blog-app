@@ -13,8 +13,7 @@ window.onload=function(){
                             '<li id="auth_dat">'+obj[i].author+" "+" "+obj[i].date+'</li>'
                             +'<br>'+'<br>'+
                             '<li id="cont">'+obj[i].content+'</li>'
-                            +'<br>'+'<br>'+
-                            '</li>';
+                            +'<br>'+'<br>';
           }
           str+='</ul>';
           
