@@ -5,8 +5,8 @@ window.onload=function(){
       if(request.readyState==XMLHttpRequest.DONE){
           if(request.status==200){
           var content=request.responseText;
-          var bodyContent=document.getElementById("includedContent");
           var obj=JSON.parse(content);
+          var bodyContent=document.getElementById("includedContent");
           bodyContent.innerHTML=obj[0].heading;
           
       }
