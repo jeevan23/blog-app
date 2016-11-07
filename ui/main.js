@@ -9,9 +9,9 @@ window.onload=function(){
           var str='<ul>';
           for(var i=0;i<obj.length;i++){
               str+='<li>'+obj[i].heading
-                            +'<br>'+
+                            +'<br>'+'<br>'+
                             obj[i].author+" "+" "+obj[i].date
-                            +'<br>'+
+                            +'<br>'+'<br>'+
                             obj[i].content
                             +'<br>'+'<br>'+
                             '</li>';
