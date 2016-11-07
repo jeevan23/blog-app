@@ -6,8 +6,21 @@ window.onload=function(){
           if(request.status==200){
           var content=request.responseText;
           var obj=JSON.parse(content);
+          var str='<ul>';
+          for(var i=0;i<obj.length;i++){
+              str+='<li>'+obj[i].heading
+                            +'<br>'+
+                            obj[i].author+" "+" "+obj[i].date
+                            +'<br>'+
+                            obj[i].content
+                            +'<br>'+'<br>'+
+                            '</li>';
+          }
+          str+='</ul>';
+          
+          
           var bodyContent=document.getElementById("includedContent");
-          bodyContent.innerHTML=obj[0].heading;
+          bodyContent.innerHTML=str;
           
       }
       }
