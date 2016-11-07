@@ -8,15 +8,18 @@ window.onload=function(){
           var obj=JSON.parse(content);
           var str='<ul>';
           for(var i=0;i<obj.length;i++){
-              str+='<li>'+obj[i].heading
+              str+='<li id="head">'+obj[i].heading+'</li>'
                             +'<br>'+'<br>'+
-                            obj[i].author+" "+" "+obj[i].date
+                            '<li id="auth_dat">'+obj[i].author+" "+" "+obj[i].date+'</li>'
                             +'<br>'+'<br>'+
-                            obj[i].content
+                            '<li id="cont">'+obj[i].content+'</li>'
                             +'<br>'+'<br>'+
                             '</li>';
           }
           str+='</ul>';
+          
+          var head=document.querySelector("#head");
+          head.style.color="Green";
           
           
           var bodyContent=document.getElementById("includedContent");
