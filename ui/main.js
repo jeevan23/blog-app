@@ -8,7 +8,7 @@ window.onload=function(){
           var obj=JSON.parse(content);
           var str='<ul>';
           for(var i=0;i<obj.length;i++){
-              str+='<li>'+obj[i].heading
+              str+='<li id="head">'+obj[i].heading
                             +'<br>'+'<br>'+
                             obj[i].author+" "+" "+obj[i].date
                             +'<br>'+'<br>'+
@@ -18,8 +18,8 @@ window.onload=function(){
           }
           str+='</ul>';
           
-          //var head=document.querySelector("#head");
-          //head.style.color="Green";
+          var head=document.querySelector("#head");
+          head.style.color="Yellow";
           
           
           var bodyContent=document.getElementById("includedContent");
