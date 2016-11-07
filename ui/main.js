@@ -8,12 +8,13 @@ window.onload=function(){
           var obj=JSON.parse(content);
           var str='<ul>';
           for(var i=0;i<obj.length;i++){
-              str+='<li id="head">'+obj[i].heading+'</li>'
+              str+='<li id="head">'+obj[i].heading
                             +'<br>'+'<br>'+
-                            '<li id="auth_dat">'+obj[i].author+" "+" "+obj[i].date+'</li>'
+                            '<li id="auth_dat">'+obj[i].author+" "+" "+obj[i].date
                             +'<br>'+'<br>'+
-                            '<li id="cont">'+obj[i].content+'</li>'
-                            +'<br>'+'<br>';
+                            '<li id="cont">'+obj[i].content
+                            +'<br>'+'<br>'
+                            +'</li>';
           }
           str+='</ul>';
           
