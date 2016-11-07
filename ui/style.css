@@ -1,19 +1,20 @@
 body {
     font-family: sans-serif;
     background-color: lightgrey;
-    margin-top: 75px;
+    margin-top: 0;
 }
 
  .container{
-                        max-width: 500px;
-                        color: #353333;
-                        margin: 0 auto;
-                        font-family: sans-serif;
-                        padding-top: 60px;
-                        padding-left: 20px;
-                        padding-right: 20px;
-                        margin-top:500px;
+             
+                 color: #353333;
+                margin: 0 auto;
+                font-family: sans-serif;
+                height: 500px;
+                width: 100%;
+                margin-top: 111px;
             }
+            
+            
 .header{
     background: teal;
     position: fixed;
