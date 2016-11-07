@@ -7,7 +7,7 @@ window.onload=function(){
           var content=request.responseText;
           var obj=JSON.parse(content);
           var bodyContent=document.getElementById("includedContent");
-          bodyContent.innerHTML=obj[0].heading<br>obj[0].author<br>obj[0].date<br>obj[0].content;
+          bodyContent.innerHTML=obj[0].heading;
           
       }
       }
