@@ -1,17 +1,17 @@
 body {
     font-family: sans-serif;
     background-color: lightgrey;
-    margin-top: 0;
+    margin-top: 160px;
+    margin-left: 50px;
 }
 
  .container{
              
-                 color: #353333;
-                margin: 0 auto;
-                font-family: sans-serif;
-                height: 500px;
-                width: 100%;
-                margin-top: 111px;
+                     color: #3d5a99;
+                     font-family: 'Roboto Condensed', sans-serif;
+                     padding-left: 50px;
+                     margin-bottom: 500px;
+                     font-size: 1.9em;
             }
             
             
