@@ -11,7 +11,7 @@ window.onload=function(){
           {
               str+=`<li>
               
-                            <a href="#">${obj[i].heading}</a>
+                            <a href="#" id="link_header">${obj[i].heading}</a>
                             <br><br>
                             ${obj[i].author} ${obj[i].date}
                             <br><br>
