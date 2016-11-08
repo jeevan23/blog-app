@@ -7,7 +7,8 @@ window.onload=function(){
           var content=request.responseText;
           var obj=JSON.parse(content);
           var str='<ul>';
-          for(var i=0;i<obj.length;i++){
+          for(var i=0;i<obj.length;i++)
+          {
               str+='<li>'+obj[i].heading
                             +'<br>'+'<br>'+
                             obj[i].author+" "+" "+obj[i].date
