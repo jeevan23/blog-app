@@ -11,11 +11,11 @@ window.onload=function(){
           {
               str+=`<li>
               
-                            <a href="#">obj[i].heading</a>
+                            <a href="#">${obj[i].heading}</a>
                             <br><br>
-                            obj[i].author obj[i].date
+                            ${obj[i].author} ${obj[i].date}
                             <br><br>
-                            obj[i].content
+                            ${obj[i].content}
                             <br><br>
                             
                     </li>`;
