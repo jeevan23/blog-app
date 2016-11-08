@@ -9,13 +9,16 @@ window.onload=function(){
           var str='<ul>';
           for(var i=0;i<obj.length;i++)
           {
-              str+='<li>'+obj[i].heading
-                            +'<br>'+'<br>'+
-                            obj[i].author+" "+" "+obj[i].date
-                            +'<br>'+'<br>'+
+              str+=`<li>
+              
+                            <a href="#">obj[i].heading</a>
+                            <br><br>
+                            obj[i].author obj[i].date
+                            <br><br>
                             obj[i].content
-                            +'<br>'+'<br>'
-                            +'</li>';
+                            <br><br>
+                            
+                    </li>`;
           }
           str+='</ul>';
           
