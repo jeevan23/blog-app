@@ -132,6 +132,18 @@ app.get('/:articleName',function(req, res) {
 });
 
 
+
+
+app.get('/cal.png', function (req, res) {
+  res.sendFile(path.join(__dirname,'cal.png'));
+});
+
+
+
+app.get('/user.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'user.png'));
+});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
