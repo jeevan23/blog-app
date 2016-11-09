@@ -22,8 +22,6 @@ window.onload=function(){
           }
           str+='</ul>';
           
-          //var head=document.querySelector("#head");
-          //head.style.color="Yellow";
           
           
           var bodyContent=document.getElementById("includedContent");
