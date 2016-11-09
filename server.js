@@ -117,6 +117,17 @@ app.get('/test-db',function(req,res){
 });
 
 
+
+app.get('/cal.png', function (req, res) {
+  res.sendFile(path.join(__dirname,'cal.png'));
+});
+
+
+
+app.get('/user.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'user.png'));
+});
+
 app.get('/:articleName',function(req, res) {
      pool.query("SELECT * FROM blog_posts WHERE title = $1", [req.params.articleName], function (err, result) {
     if (err) {
@@ -134,15 +145,6 @@ app.get('/:articleName',function(req, res) {
 
 
 
-app.get('/cal.png', function (req, res) {
-  res.sendFile(path.join(__dirname,'cal.png'));
-});
-
-
-
-app.get('/user.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'user.png'));
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
