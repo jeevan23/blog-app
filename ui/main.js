@@ -13,7 +13,7 @@ window.onload=function(){
               
                             <a href="/${obj[i].title}" id="link_header">${obj[i].heading}</a>
                             <br><br>
-                            <img src="/user.png"/>${obj[i].author} <img src="/cal.png"/>${obj[i].date}
+                            <img src="/user.png"/> ${obj[i].author} <img src="/cal.png"/> ${obj[i].date}
                             <br><br>
                             ${obj[i].content}
                             <br><br>
