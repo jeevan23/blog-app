@@ -129,7 +129,7 @@ app.get('/user.png', function (req, res) {
 });
 
 app.get('/:articleName',function(req, res) {
-     pool.query("SELECT * FROM blog_posts WHERE title = $1", [req.params.articleName], function (err, result) {
+     pool.query("SELECT * FROM blog_posts WHERE heading = $1", [req.params.articleName], function (err, result) {
     if (err) {
         res.status(500).send(err.toString());
     } else {
