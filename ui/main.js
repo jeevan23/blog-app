@@ -1,5 +1,5 @@
 
-window.onload=function(){
+function loadContents(){
   var request=new XMLHttpRequest()  ;
   request.onreadystatechange=function(){
       if(request.readyState==XMLHttpRequest.DONE){
@@ -33,8 +33,10 @@ window.onload=function(){
   };
   request.open('GET','http://jeevan23.imad.hasura-app.io/test-db',true);
   request.send(); 
-};
+}
 
 function link(contents){
     
 }
+
+loadContents();
