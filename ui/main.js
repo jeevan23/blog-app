@@ -26,8 +26,10 @@ function loadContents(){
           
           var bodyContent=document.getElementById("includedContent");
           bodyContent.innerHTML=str;
-          link(obj);
           
+          for(var j=0;j<obj.length;j++){
+              obj[j].heading.onclick=link(obj[j].heading);
+          }
       }
       }
   };
@@ -36,31 +38,28 @@ function loadContents(){
 }
 
 function link(obj1){
-    for(var i=0;i<obj1.length;i++){
-        obj1[i].heading.onclick=function(){
-          var request1=new XMLHttpRequest();
-          request1.onreadystatechange=function(){
-              if(request.readyState==XMLHttpRequest.DONE){
-                  if(request.status==200){
-                      var content1=JSON.parse(request1.responseText);
-                      var str='<ul>';
-                      str+=`<li>
-                                    <span id="link_header">${content1[i].heading}</span>
-                                    <br><br>
-                                    <img src="/user.png"/> ${content1[i].author} <img src="/cal.png"/> ${content1[i].date}
-                                    <br><br>
-                                    ${content1[i].content}
-                                    <br><br>
-                            </li>`;
-                            
-                        str+='</ul>';
-                  }
-              }
-          };
-          request.open('GET','http://jeevan23.imad.hasura-app.io/'+obj1[i].heading,true);
-          request.send();
-        };
-    }
+    var request1=new XMLHttpRequest();
+    request1.onreadystatechange=function(){
+        if(request1.readyState==XMLHttpRequest.DONE){
+            if(request1.status==200){
+                var content1=JSON.parse(request1.responseText);
+                var str='<ul>';
+                str+=`<li>
+                    
+                        <span id="link_header">${content1.heading}</span>
+                        <br><br>
+                        <img src="/user.png"/> ${content1.author} <img src="/cal.png"/> ${content1.date}
+                        <br><br>
+                        ${content1.content}
+                        <br><br>
+                        
+                        </li>`;
+                str+='</ul>';
+            }
+        }
+    };
+    request1.open('GET','/http://jeevan23.imad.hasura-app.io/'+obj1,true);
+    request1.send();
 }
 
 loadContents();
