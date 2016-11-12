@@ -6,7 +6,6 @@ function loadContents(){
           if(request.status==200){
           var content=request.responseText;
           var obj=JSON.parse(content);
-          link(content);
           var str='<ul>';
           for(var i=0;i<obj.length;i++)
           {
