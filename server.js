@@ -80,7 +80,7 @@ function createTemplate(data)
             <large class="size">Copyright &copy; 2016 GeekInstant.com,Inc.All rights reserved.</large>
         </div>
         
-        <script type="text/javascript" src="/ui/main.js">
+        
         
         </script>
         
