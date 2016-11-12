@@ -18,10 +18,7 @@ app.use(morgan('combined'));
 
 function createTemplate(data)
 {
-    var title=data.title;
-    var heading=data.heading;
-    var content=data.content;
-    var date=data.date;
+
     var htmlTemplate =`
 <html>
     <head>
@@ -60,7 +57,14 @@ function createTemplate(data)
         
         <div id="includedContent" class="container">
             
-                
+
+             <span id="link_header">${data.heading}</span>
+             <br><br>
+             <img src="/user.png"/> ${data.author} <img src="/cal.png"/> ${data.date}
+              <br><br>
+            ${data.content}
+            <br><br>
+             
                   
         </div>
         
@@ -127,7 +131,8 @@ app.get('/:articleName',function(req, res) {
         if (result.rows.length === 0) {
             res.status(404).send('Article not found');
         } else {
-            res.send(JSON.stringify(result.rows));
+            var articleData = result.rows[0];
+            res.send(createTemplate(articleData));
         }
     }
   });
