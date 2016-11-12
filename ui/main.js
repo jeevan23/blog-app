@@ -58,8 +58,8 @@ function link(obj1){
             }
         }
     };
-    request1.open('GET','/http://jeevan23.imad.hasura-app.io/${obj1}',true);
-    request1.send();
+    request1.open('GET','/http://jeevan23.imad.hasura-app.io/'+obj1,true);
+    request1.send(obj1);
 }
 
 loadContents();
