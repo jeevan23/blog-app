@@ -16,51 +16,6 @@ var app = express();
 app.use(morgan('combined'));
 
 
-
-
-
-var articles={
-    
-
-'articleone':
-{
-  title:'Article-one|Jeevan Deep',
-  heading:'Article One',
-  date:'oct 21,2016',
-  content:`
-                <p>
-                    This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.
-                </p>
-                <p>
-                    This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.
-                </p>
-                <p>
-                    This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.
-                </p>`
-  
-},
-'articletwo':
-{
-   title:'Article-two|Jeevan Deep',
-  heading:'Article Two',
-  date:'oct 25,2016',
-  content:`
-                <p>
-                    This is the content of my second article.
-                </p>`
-},
-'article-three':
-{
-   title:'Article-three|Jeevan Deep',
-  heading:'Article Three',
-  date:'oct 28,2016',
-  content:`
-                <p>
-                    This is the content of my third article.
-                </p>`
-}
-
-};
 function createTemplate(data)
 {
     var title=data.title;
@@ -68,32 +23,68 @@ function createTemplate(data)
     var content=data.content;
     var date=data.date;
     var htmlTemplate =`
-    <html>
-        <head>
-            <title>
-                ${title}
-            </title>
+<html>
+    <head>
+        
+         <meta charset="UTF-8">
+  
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
             <link href="/ui/style.css" rel="stylesheet" />
-           
-        </head>
-        <body>
-           <div class="container">
-                <div>
-                    <a href="/">Home</a>
+            <link href="http://weloveiconfonts.com/api/?family=brandico" rel="stylesheet" />
+            
+    </head>
+    <body>
+        <div class="header">
+            
+                <div class="right">
+                    <ul>
+                        <li><a href="#">SignIn</a></li>
+                        <li class="dropdown"><a class="dropbtn">Topics</a>
+                          <div class="dropdown-content">
+                            <a href="#">Ethical Hacking</a>
+                            <a href="#">Cyber Security</a>
+                            <a href="#">Algorithms</a>
+                            <a href="#">Web Development</a>
+                            </div>
+                        </li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a  href="#">About Me</a></li>
+                        <li><a  href="http://jeevan23.imad.hasura-app.io">Home</a></li>
+                    </ul>
                 </div>
-                <hr/>
-                <h3>
-                    ${heading}
-                </h3>
-                <div>
-                    ${date}
+                <div class="left">
+                    GeekInstant
                 </div>
-                <div>
-                    ${content}
-                </div>
-            </div>
-        </body>
-    </html>
+        </div>
+        
+        <div id="includedContent" class="container">
+            
+                
+                  
+        </div>
+        
+        <div class="footer">
+                    <!-- Go to www.addthis.com/dashboard to customize your tools --> 
+                    <div class="addthis_inline_share_toolbox"></div>
+                                    <script>
+                                              (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
+                                                t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
+                                              })(window, document, '_gscq','script','//widgets.getsitecontrol.com/59309/script.js');
+                                     </script>
+            <br><br><br><br><br><br><br>
+            <large class="size">Copyright &copy; 2016 GeekInstant.com,Inc.All rights reserved.</large>
+        </div>
+        
+        <script type="text/javascript" src="/ui/main.js">
+        
+        </script>
+        
+        <!-- Go to www.addthis.com/dashboard to customize your tools --> 
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58181de50e8b802c"></script> 
+    </body>
+</html>
+
     `;
     return htmlTemplate;
 }
