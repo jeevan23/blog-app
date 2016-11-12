@@ -11,7 +11,7 @@ function loadContents(){
           {
               str+=`<li>
               
-                            <a href="/${obj[i].heading}" id="link_header">${obj[i].heading}</a>
+                            <a href="/${obj[i].title}" id="link_header">${obj[i].heading}</a>
                             <br><br>
                             <img src="/user.png"/> ${obj[i].author} <img src="/cal.png"/> ${obj[i].date}
                             <br><br>
