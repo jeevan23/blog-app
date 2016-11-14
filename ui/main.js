@@ -35,5 +35,26 @@ function loadContents(){
   request.send(); 
 }
 
+function loadLoggedInUser (username) {
+    var Logout = document.getElementById('Logout');
+    Logout.innerHTML = `
+        <a href="/ui/logout">Logout</a>
+    `;
+}
 
+function loadLogin () {
+    // Check if the user is already logged in
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState === XMLHttpRequest.DONE) {
+            if (request.status === 200) {
+                loadLoggedInUser();
+            } 
+        }
+    };
+    
+    request.open('GET', '/check-login', true);
+    request.send(null);
+}
+loadLogin();
 loadContents();
